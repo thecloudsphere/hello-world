@@ -1,0 +1,45 @@
+---
+blueprint:
+  author: Christian Berendt
+  repository_server: https://github.com
+  repository: thecloudsphere/hello-world
+  name: ansible/jupyterhub
+  versions:
+    - version: main
+  description: |
+    Deploy docker and start Jupyterhub as version.
+
+  environment:
+    repository: thecloudsphere/registry
+    name: ansible/terraform
+    version: 7.1.0
+
+  inputs:
+    - name: image
+      destination:
+        path: ANSIBLE_VAR_jupyterhub_image
+        type: environment
+      default: "jupyterhub/jupyterhub"
+      required: false
+      description: |
+        Jupyterhub image
+
+    - name: registry
+      destination:
+        path: ANSIBLE_VAR_jupyterhub_registry
+        type: environment
+      default: "index.docker.io"
+      required: false
+      description: |
+        Jupyterhub registry
+
+    - name: version
+      destination:
+        path: ANSIBLE_VAR_jupyterhub_version
+        type: environment
+      default: "3.1.1"
+      required: false
+      description: |
+        Jupyterhub version
+
+  outputs: []

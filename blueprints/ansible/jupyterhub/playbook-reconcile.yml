@@ -1,0 +1,9 @@
+---
+- name: Reconcile ansible/jupyterhub
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: NOT IMPLEMENTED
+      ansible.builtin.debug:
+        msg: Reconcile play not implemented

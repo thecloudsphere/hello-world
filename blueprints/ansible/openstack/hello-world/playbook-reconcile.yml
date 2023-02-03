@@ -1,5 +1,5 @@
 ---
-- name: Create openstack/hello-world
+- name: Reconcile openstack/hello-world
   hosts: localhost
   connection: local
 

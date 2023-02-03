@@ -1,9 +1,5 @@
 ---
 terraform-hello-world:
-  environment:
-    name: terraform/openstack
-    repository: thecloudsphere/registry
-    repository_server: https://github.com
   blueprint:
     name: terraform/openstack/hello-world
     repository: thecloudsphere/hello-world
@@ -20,10 +16,6 @@ terraform-hello-world:
     "public network": public
 
 ansible-hello-world:
-  environment:
-    name: ansible/base
-    repository: thecloudsphere/registry
-    repository_server: https://github.com
   blueprint:
     name: ansible/openstack/hello-world
     repository: thecloudsphere/hello-world
@@ -38,3 +30,12 @@ ansible-hello-world:
     image: "Ubuntu 22.04"
     prefix: "{{ tcs.name }}"
     "public network": public
+
+ansible-jupyterhub:
+  blueprint:
+    name: ansible/jupyterhub
+    repository: thecloudsphere/hello-world
+    repository_server: https://github.com
+  blueprint_version: main
+  inputs:
+    version: "3.1.1"

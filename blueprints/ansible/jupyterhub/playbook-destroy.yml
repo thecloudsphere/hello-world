@@ -1,0 +1,9 @@
+---
+- name: Destroy ansible/jupyterhub
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: NOT IMPLEMENTED
+      ansible.builtin.debug:
+        msg: Destroy play not implemented
