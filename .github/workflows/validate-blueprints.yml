@@ -22,4 +22,5 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
       - run: pip3 install yamale ruamel.yaml
-      - run: find blueprints -name .tcs.yaml | xargs -n1 yamale -s blueprints/schema.yaml -p ruamel
+      - run: wget https://raw.githubusercontent.com/thecloudsphere/tcsctl/main/tcsctl/schemas/schema.blueprint.yaml
+      - run: find blueprints -name .tcs.yaml | xargs -n1 yamale -s schema.blueprint.yaml -p ruamel
