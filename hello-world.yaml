@@ -1,0 +1,40 @@
+---
+terraform-hello-world:
+  environment:
+    name: terraform/openstack
+    repository: thecloudsphere/registry
+    repository_server: https://github.com
+  blueprint:
+    name: terraform/openstack/hello-world
+    repository: thecloudsphere/hello-world
+    repository_server: https://github.com
+  blueprint_version: main
+  inputs:
+    clouds.yaml:
+      type: file
+      path: clouds.yaml
+    "cloud name": openstack
+    flavor: "SCS-1V:1:10"
+    image: "Ubuntu 22.04"
+    prefix: "{{ tcs.name }}"
+    "public network": public
+
+ansible-hello-world:
+  environment:
+    name: ansible/base
+    repository: thecloudsphere/registry
+    repository_server: https://github.com
+  blueprint:
+    name: ansible/openstack/hello-world
+    repository: thecloudsphere/hello-world
+    repository_server: https://github.com
+  blueprint_version: main
+  inputs:
+    clouds.yaml:
+      type: file
+      path: clouds.yaml
+    "cloud name": openstack
+    flavor: "SCS-1V:1:10"
+    image: "Ubuntu 22.04"
+    prefix: "{{ tcs.name }}"
+    "public network": public

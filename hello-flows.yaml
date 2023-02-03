@@ -1,0 +1,10 @@
+---
+hello-world:
+  name: Hello world example for a flow
+  description: |
+    This is a simple hello world example for a flow.
+  steps:
+    - name: First step
+      description: |
+        This is the first step of the flow.
+      template: terraform-hello-world

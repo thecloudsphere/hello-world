@@ -1,0 +1,12 @@
+---
+clouds:
+  openstack:
+    auth:
+      auth_url: https://keystone.services.a.thecloudsphere.io
+      username: default-sandbox
+      password: password
+      project_name: default-sandbox
+      project_domain_name: default
+      user_domain_name: default
+    region_name: RegionA
+    identity_api_version: 3
