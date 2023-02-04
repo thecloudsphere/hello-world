@@ -39,3 +39,11 @@ ansible-jupyterhub:
   blueprint_version: main
   inputs:
     version: "3.1.1"
+
+python-hello-world:
+  blueprint:
+    name: python/hello-world
+    repository: thecloudsphere/hello-world
+    repository_server: https://github.com
+  blueprint_version: main
+  inputs: {}
