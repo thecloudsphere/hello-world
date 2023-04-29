@@ -10,7 +10,7 @@ terraform-hello-world:
       type: file
       path: clouds.yaml
     "cloud name": openstack
-    flavor: "SCS-1V:1:10"
+    flavor: "SCS-1V-1-10"
     image: "Ubuntu 22.04"
     prefix: "{{ tcs.name }}"
     "public network": public
@@ -26,19 +26,10 @@ ansible-hello-world:
       type: file
       path: clouds.yaml
     "cloud name": openstack
-    flavor: "SCS-1V:1:10"
+    flavor: "SCS-1V-1-10"
     image: "Ubuntu 22.04"
     prefix: "{{ tcs.name }}"
     "public network": public
-
-ansible-jupyterhub:
-  blueprint:
-    name: ansible/jupyterhub
-    repository: thecloudsphere/hello-world
-    repository_server: https://github.com
-  blueprint_version: main
-  inputs:
-    version: "3.1.1"
 
 python-hello-world:
   blueprint:

@@ -1,5 +1,0 @@
----
-collections:
-  - name: https://github.com/osism/ansible-collection-services.git
-    type: git
-    version: main
