@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-tcsctl = "==0.1.6"
+tcsctl = "==0.1.7"
 
 [dev-packages]
 
