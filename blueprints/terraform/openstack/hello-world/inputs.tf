@@ -20,5 +20,5 @@ variable "image" {
 
 variable "flavor" {
   type    = string
-  default = "SCS-1V:4:10"
+  default = "SCS-1V-4-10"
 }
