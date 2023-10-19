@@ -19,7 +19,7 @@ jobs:
   validate-blueprints:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
       - run: pip3 install yamale ruamel.yaml
       - run: wget https://raw.githubusercontent.com/thecloudsphere/tcsctl/main/tcsctl/schemas/schema.blueprint.yaml
